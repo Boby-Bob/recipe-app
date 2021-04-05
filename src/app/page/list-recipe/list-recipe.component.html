@@ -1,0 +1,18 @@
+<p>list-recipe works!</p>
+<h1>{{currentCar}}</h1>
+<ul class="content" *ngIf="allowed">
+    <li>je suis</li>
+    <li>je suis</li>
+    <li>je suis</li>
+</ul>
+
+<ul class="content-array" [ngClass]="allowed ? 'yooooooo' : 'rr'" [style.background-color]= "'yellow'">
+    <li *ngFor="let c of cars">
+        {{c}}
+    </li>
+</ul>
+
+<button [hidden]="!allowed" click="activate(5)" class="btn bts-succes" style="color: #fff; background-color: red;">
+    STATUS
+</button>
+<input type="text" class="form-control" [(ngModel)]="currentCar">
